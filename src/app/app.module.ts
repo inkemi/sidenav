@@ -7,18 +7,17 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
-import { AppLayoutComponent } from './app-layout/app-layout.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import {LayoutModule} from './layout/layout.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AppLayoutComponent,
-    ToolbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LayoutModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
