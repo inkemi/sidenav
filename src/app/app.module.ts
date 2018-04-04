@@ -7,10 +7,14 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AppLayoutComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
