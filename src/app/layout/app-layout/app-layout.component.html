@@ -1,3 +1,17 @@
-<p>
-  app-layout works!
-</p>
+<app-toolbar (navToggleL)="toggleNavL()"></app-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav mode="side"
+               [opened]="navBarOpenL">
+    <mat-card>Sidenav content</mat-card>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-sidenav mode="side"
+                 [opened]="navBarOpenR"
+                 position="end">
+      <mat-card>End content</mat-card>
+    </mat-sidenav>
+   <mat-card class="main-card">
+     Main
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>
