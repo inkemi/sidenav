@@ -1,17 +1,34 @@
 <app-toolbar (navToggleL)="toggleNavL()"></app-toolbar>
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container fxFlexFill>
   <mat-sidenav mode="side"
-               [opened]="navBarOpenL">
-    <mat-card>Sidenav content</mat-card>
+               [opened]="navBarOpenL" >
+    <mat-nav-list>
+      <a *ngFor="let route of routes" mat-list-item [routerLink]="route.route">
+        <app-margin-icon [iconName]="route.icon">
+        </app-margin-icon>{{route.title}}
+      </a>
+    </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
+  <mat-sidenav-content fxLayout="column">
     <mat-sidenav mode="side"
                  [opened]="navBarOpenR"
                  position="end">
-      <mat-card>End content</mat-card>
+      <div fxFlex>
+        <mat-card>
+          End content
+        </mat-card>
+      </div>
     </mat-sidenav>
-   <mat-card class="main-card">
-     Main
-    </mat-card>
+    <div fxFlex>
+      <mat-card>
+        Main
+      </mat-card>
+    </div>
+    <footer fxLayout="column">
+      <div fxLayout="row">
+        <hr fxFlex="100">
+      </div>
+      <p fxFlexAlign="center"> My page</p>
+    </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
