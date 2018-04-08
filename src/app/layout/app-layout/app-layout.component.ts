@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import {MediaChange, ObservableMedia} from '@angular/flex-layout';
+import {Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 
 @Component({

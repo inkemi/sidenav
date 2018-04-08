@@ -7,11 +7,11 @@ const routes: Routes = [
   {path: '', component: AppLayoutComponent,
   children: [
     {
-      path: 'user',
+      path: 'users',
       component: AppComponent
     },
     {
-      path: 'folder',
+      path: 'folders',
       component: AppComponent
     }
   ]}
