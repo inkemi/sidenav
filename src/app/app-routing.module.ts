@@ -4,7 +4,17 @@ import {AppComponent} from './app.component';
 import {AppLayoutComponent} from './layout/app-layout/app-layout.component';
 
 const routes: Routes = [
-  {path: 'layout', component: AppLayoutComponent}
+  {path: '', component: AppLayoutComponent,
+  children: [
+    {
+      path: 'user',
+      component: AppComponent
+    },
+    {
+      path: 'folder',
+      component: AppComponent
+    }
+  ]}
 ];
 
 @NgModule({

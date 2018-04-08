@@ -12,6 +12,7 @@ import {
 } from '@angular/material';
 import {RouterModule} from '@angular/router';
 import { MarginIconComponent } from './margin-icon/margin-icon.component';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { MarginIconComponent } from './margin-icon/margin-icon.component';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    FlexLayoutModule
   ],
   declarations: [ToolbarComponent, AppLayoutComponent, MarginIconComponent],
   exports: [ToolbarComponent, AppLayoutComponent]
