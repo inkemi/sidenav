@@ -9,6 +9,8 @@ export class ToolbarComponent implements OnInit {
 
   @Output()
   navToggleL = new EventEmitter();
+  @Output()
+  navToggleR = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +18,8 @@ export class ToolbarComponent implements OnInit {
 
   toggleNavL() {
     this.navToggleL.emit();
+  }
+  toggleNavR() {
+    this.navToggleR.emit();
   }
 }

@@ -35,6 +35,9 @@ export class AppLayoutComponent implements OnDestroy {
   toggleNavL() {
     this.navBarOpenL = !this.navBarOpenL;
   }
+  toggleNavR(){
+    this.navBarOpenR = !this.navBarOpenR;
+  }
   loadMobileContent() {
     this.navBarOpenL = false;
     this.navBarOpenR = false;
